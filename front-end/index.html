@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle de Solicitações</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Sistema de Controle de Solicitações</h1>
+    <p class="subtitulo">
+  Gerencie solicitações de forma simples e organizada.
+</p>
+
+    <div class="formulario">
+      <input type="text" id="titulo" placeholder="Título"/>
+
+      <input type="text" id="solicitante" placeholder="Solicitante"/>
+
+      <select id="status">
+        <option value="">Selecione o status</option>
+        <option value="Pendente">Pendente</option>
+        <option value="Concluída">Concluída</option>
+      </select>
+
+      <button onclick="criarSolicitacao()">
+        Salvar Solicitação
+      </button>
+    </div>
+
+    <div class="resumo">
+      <p>Pendentes: <span id="pendentes">0</span></p>
+      <p>Concluídas: <span id="concluidas">0</span></p>
+    </div>
+
+    <div class="filtro">
+      <select id="filtroStatus" onchange="listarSolicitacoes()">
+        <option value="">Todos</option>
+        <option value="Pendente">Pendente</option>
+        <option value="Concluída">Concluída</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Solicitante</th>
+          <th>Status</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabelaSolicitacoes"></tbody>
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
