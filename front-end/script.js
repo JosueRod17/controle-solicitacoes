@@ -1,4 +1,4 @@
-const API_URL = "https://controle-solicitacoes.onrender.com";
+const API_URL = "https://controle-solicitacoes.onrender.com/solicitacoes";
 
 async function listarSolicitacoes() {
 
